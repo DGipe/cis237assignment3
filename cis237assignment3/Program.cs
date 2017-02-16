@@ -10,6 +10,52 @@ namespace cis237assignment3
     {
         static void Main(string[] args)
         {
+
+            // Create class instances
+            Astromech astro = new Astromech();
+            Droid drd = new Droid();
+            DroidCollection drdc = new DroidCollection();
+            Janitor jan = new Janitor();
+            Protocol pro = new Protocol();
+            UserInterface ui = new UserInterface();
+            Utility Util = new Utility();
+
+            //Header (cause console programs are boring)
+            ui.Output("************************************************************" + Environment.NewLine +
+            "*********                   CIS237                 *********" + Environment.NewLine +
+            "********                 Assignment #3              ********" + Environment.NewLine +
+            "*******             Jawa Inventory Managment         *******" + Environment.NewLine +
+            "************************************************************" + Environment.NewLine);
+
+            //Return tag 
+            MenuReturn:
+
+            int choice = ui.GetInput();
+
+            //Keep running menu untill user exits
+            while (choice != 3)
+            {
+
+                //******************************************
+                //Print option
+                //******************************************
+                if (choice == 1)
+                {
+                    goto MenuReturn;
+
+                }
+                //****************************************
+                //Search Option
+                //****************************************
+                if (choice == 2)
+                {
+                    
+                    goto MenuReturn;
+                }
+                                
+                Environment.Exit(0);
+            }
+
         }
     }
 }
