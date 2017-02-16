@@ -14,7 +14,8 @@ namespace cis237assignment3
             Console.WriteLine(outputString);
         }
 
-        public int GetInput()
+        //Main menu input
+        public int GetMainInput()
         {
             //Main menu update            
             this.Menu();
@@ -40,6 +41,37 @@ namespace cis237assignment3
             return Int32.Parse(input);
         }
 
+
+        //Droid add input
+        public int GetAddInput()
+        {
+            //Main menu update            
+            this.AddMenu();
+
+            //Get the input from the user
+            String input = Console.ReadLine();
+
+            //While te imput is not valid re-get the input
+            while (input != "1" && input != "2" && input != "3" && input != "4")
+            {
+
+                //Print Error message
+                this.PrintErrorMessage();
+
+                //re-spring the menu
+                this.Menu();
+
+                //Get the input from the console again
+                input = Console.ReadLine();
+
+            }
+
+            return Int32.Parse(input);
+        }
+
+
+
+
         public void Menu()
         {
             Console.WriteLine("");
@@ -47,6 +79,7 @@ namespace cis237assignment3
             Console.WriteLine("1- Print Current Inventory");
             Console.WriteLine("2- Add New Droid");
             Console.WriteLine("3- Exit");
+            Console.WriteLine("");
         }
 
         private void PrintErrorMessage()
@@ -55,5 +88,18 @@ namespace cis237assignment3
             Console.WriteLine("Please make a valid choice");
             Console.WriteLine();
         }
+
+        private void AddMenu()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Which type of droid are we adding today?");
+            Console.WriteLine("");
+            Console.WriteLine("1- Astromech");
+            Console.WriteLine("2- Janitor");
+            Console.WriteLine("3- Protocol");
+            Console.WriteLine("4- Utility");
+            Console.WriteLine("");
+        }
+           
     }
 }

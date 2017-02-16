@@ -30,7 +30,7 @@ namespace cis237assignment3
             //Return tag 
             MenuReturn:
 
-            int choice = ui.GetInput();
+            int choice = ui.GetMainInput();
 
             //Keep running menu untill user exits
             while (choice != 3)
@@ -41,15 +41,18 @@ namespace cis237assignment3
                 //******************************************
                 if (choice == 1)
                 {
+                    
+
                     goto MenuReturn;
 
                 }
                 //****************************************
-                //Search Option
+                //Add Droid Option
                 //****************************************
                 if (choice == 2)
                 {
-                    
+                    int type = ui.GetAddInput();
+
                     goto MenuReturn;
                 }
                                 
