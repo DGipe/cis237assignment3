@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cis237assignment3
 {
-    class UserInterface
+    class UserInterface 
     {
         //Output, used for print
         public void Output(string outputString)

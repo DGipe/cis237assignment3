@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cis237assignment3
 {
-    class Utility
+    class Utility : Droid
     {
     }
 }

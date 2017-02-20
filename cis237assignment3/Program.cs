@@ -16,7 +16,7 @@ namespace cis237assignment3
             Droid drd = new Droid();
             DroidCollection drdc = new DroidCollection();
             Janitor jan = new Janitor();
-            Protocol pro = new Protocol();
+            Protocol pro = new Protocol(); 
             UserInterface ui = new UserInterface();
             Utility Util = new Utility();
 

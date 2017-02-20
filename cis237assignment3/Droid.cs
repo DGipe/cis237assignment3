@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace cis237assignment3
 {
-    class Droid
+    class Droid : IDroid
     {
+        private string material;
+        private string model;
+        private string color;
+        private decimal baseCost;
+        private decimal totalCost;
+
+
+        public virtual void CalculateTotalCost()
+        {
+           
+        }          
+
+        public decimal TotalCost
+        {
+            get;
+            set;
+        }
     }
 }
