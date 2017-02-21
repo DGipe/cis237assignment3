@@ -100,6 +100,12 @@ namespace cis237assignment3
             Console.WriteLine("4- Utility");
             Console.WriteLine("");
         }
+
+        private void AstroMenu1()
+        {
+            return;
+
+        }
            
     }
 }
