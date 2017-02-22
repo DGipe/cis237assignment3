@@ -46,8 +46,6 @@ namespace cis237assignment3
             model = modelin;
             color = colorin;
 
-           // CalculateBaseCost(material, model);
-
         }
         public void CalculateBaseCost(string material, string model)
         {
