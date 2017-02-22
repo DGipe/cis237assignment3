@@ -19,6 +19,9 @@ namespace cis237assignment3
             Protocol pro = new Protocol(); 
             UserInterface ui = new UserInterface();
             Utility Util = new Utility();
+            IDroid[] droidList = new IDroid[20];
+            DroidCollection droidCollect = new DroidCollection();
+
 
             //Header (cause console programs are boring)
             ui.Output("************************************************************" + Environment.NewLine +
@@ -26,7 +29,7 @@ namespace cis237assignment3
             "********                 Assignment #3              ********" + Environment.NewLine +
             "*******             Jawa Inventory Managment         *******" + Environment.NewLine +
             "************************************************************" + Environment.NewLine);
-
+            int length = 0;
             //Return tag 
             MenuReturn:
 
@@ -51,9 +54,11 @@ namespace cis237assignment3
                 //****************************************
                 if (choice == 2)
                 {
-                    int type = ui.GetAddInput();
+                    droidCollect.AddDroid(droidList, length);
+                    length++;
 
                     goto MenuReturn;
+                    
                 }
                                 
                 Environment.Exit(0);

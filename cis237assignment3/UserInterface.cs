@@ -69,9 +69,6 @@ namespace cis237assignment3
             return Int32.Parse(input);
         }
 
-
-
-
         public void Menu()
         {
             Console.WriteLine("");
