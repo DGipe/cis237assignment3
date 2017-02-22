@@ -119,3 +119,5 @@ http://stackoverflow.com/questions/929608/why-am-i-getting-this-error-not-all-co
 
 
 ## Known Problems, Issues, And/Or Errors in the Program
+
+Y/N input values require them to be capitilized. Easy fix, I'm just too lazy to go change each prompt.
