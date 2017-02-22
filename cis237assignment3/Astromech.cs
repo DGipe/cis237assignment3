@@ -8,6 +8,7 @@ namespace cis237assignment3
 {
     class Astromech : Utility
     {
+        //Variables and constants4
         private bool fireExting;
         private int numships;
         private const decimal shipCost = 7m;

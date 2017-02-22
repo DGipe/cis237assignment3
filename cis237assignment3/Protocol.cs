@@ -8,6 +8,7 @@ namespace cis237assignment3
 {
     class Protocol : Droid
     {
+        //Variables and constants
         private int numLang;
         private const decimal langCost = 10m;
 

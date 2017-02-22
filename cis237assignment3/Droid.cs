@@ -8,6 +8,7 @@ namespace cis237assignment3
 {
     class Droid : IDroid
     {
+        //Variables
         private string material;
         private string model;
         private string color;
@@ -61,9 +62,9 @@ namespace cis237assignment3
             { baseCost += 50m; }
 
             if (material == "Adamantium")
-                { baseCost += 1000m; }
+                { baseCost += 2000m; }
             if (material == "Durasteal")
-                { baseCost += 500m; }
+                { baseCost += 300m; }
             if (material == "Carbon Fiber")
                 { baseCost += 100m; }
 

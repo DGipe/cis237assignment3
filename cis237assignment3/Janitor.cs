@@ -8,6 +8,7 @@ namespace cis237assignment3
 {
     class Janitor : Utility
     {
+        //Variables
         private bool trashComp;
         private bool vac;
 

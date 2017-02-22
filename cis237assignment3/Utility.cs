@@ -7,10 +7,12 @@ using System.Threading.Tasks;
 namespace cis237assignment3
 {
     class Utility : Droid
-    {
+    { 
+        //Variables
         private bool toolBox;
         private bool compconn;
         private bool Arm;
+        //Pulling this one in because it was the only way I could figure out how to get the cost to print at the bottom of the list
         private string Model;
 
         public Utility(string model, string material, string color, bool toolbox, bool compConn, bool arm) : base(model, material, color)
@@ -19,8 +21,6 @@ namespace cis237assignment3
             toolBox = toolbox;
             compconn = compConn;
             Arm = arm;
-
-
         }
 
         public override void CalculateTotalCost()

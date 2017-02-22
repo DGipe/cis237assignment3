@@ -11,8 +11,9 @@ namespace cis237assignment3
         public void AddDroid(IDroid[] droidList, int Index)
         {
             UserInterface ui = new UserInterface();
-            string model;
-
+            
+            string model;  
+                     
             int type = ui.GetAddInput();
             string material = ui.GetMaterial();
             string color = ui.GetColor();
@@ -36,7 +37,7 @@ namespace cis237assignment3
                     model = "Astromech";
                     bool fire = ui.GetFire();
                     int numShips = ui.GetShips();
-                   droidList[Index] = new Astromech(model, material, color, toolbox, compConn, arm, fire, numShips);
+                    droidList[Index] = new Astromech(model, material, color, toolbox, compConn, arm, fire, numShips);
                 }
 
                 if (type == 2)

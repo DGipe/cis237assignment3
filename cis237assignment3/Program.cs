@@ -25,6 +25,7 @@ namespace cis237assignment3
             int length = 0;
             string output = "";
 
+            //I dont think I needed this, but I was getting some weird formatting issues intially
             Console.BufferHeight = 1000;
             
             //Header (cause console programs are boring)
@@ -56,8 +57,6 @@ namespace cis237assignment3
                         {
                             output += droid.ToString();
                         }
-
-
                     }
                     Console.WriteLine(output);
                     Console.WriteLine("Press any key to continue...");
@@ -74,13 +73,12 @@ namespace cis237assignment3
                     Console.Clear();
                     droidCollect.AddDroid(droidList, length);
                     length++;
+                    Console.WriteLine("");
                     Console.WriteLine("Complete! Press any key to continue...");
                     Console.ReadKey();
                     Console.Clear();
-                    goto MenuReturn;
-                    
-                }
-                                
+                    goto MenuReturn;                    
+                }                                
                 Environment.Exit(0);
             }
 

@@ -69,6 +69,7 @@ namespace cis237assignment3
             return Int32.Parse(input);
         }
 
+        //Material Selection
         public string GetMaterial()
         {
             this.MaterialMenu();
