@@ -1,4 +1,7 @@
-﻿using System;
+﻿//David Gipe
+//CIS 237
+//Assignment 3
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,14 +15,16 @@ namespace cis237assignment3
         {
 
             // Create class instances
-            Astromech astro = new Astromech();
-            Droid drd = new Droid();
-            DroidCollection drdc = new DroidCollection();
-            Janitor jan = new Janitor();
-            Protocol pro = new Protocol(); 
             UserInterface ui = new UserInterface();
-            Utility Util = new Utility();
 
+            //Array
+            IDroid[] droidList = new IDroid[20];
+            DroidCollection droidCollect = new DroidCollection();
+
+            int length = 0;
+            string output = "";
+
+            Console.BufferHeight = 1000;
             
             //Header (cause console programs are boring)
             ui.Output("************************************************************" + Environment.NewLine +
@@ -27,7 +32,7 @@ namespace cis237assignment3
             "********                 Assignment #3              ********" + Environment.NewLine +
             "*******             Jawa Inventory Managment         *******" + Environment.NewLine +
             "************************************************************" + Environment.NewLine);
-
+          
             //Return tag 
             MenuReturn:
 
@@ -42,8 +47,21 @@ namespace cis237assignment3
                 //******************************************
                 if (choice == 1)
                 {
-                   
 
+                    Console.Clear();
+                    foreach (IDroid droid in droidList)
+                    {
+                        if (droid != null)
+                        {
+                            output += droid.ToString();
+                        }
+
+
+                    }
+                    Console.WriteLine(output);
+                    Console.WriteLine("Press any key to continue...");
+                    Console.ReadKey();
+                    Console.Clear();
                     goto MenuReturn;
 
                 }
@@ -52,9 +70,14 @@ namespace cis237assignment3
                 //****************************************
                 if (choice == 2)
                 {
-                    int type = ui.GetAddInput();
-
+                    Console.Clear();
+                    droidCollect.AddDroid(droidList, length);
+                    length++;
+                    Console.WriteLine("Complete! Press any key to continue...");
+                    Console.ReadKey();
+                    Console.Clear();
                     goto MenuReturn;
+                    
                 }
                                 
                 Environment.Exit(0);
