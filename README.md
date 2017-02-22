@@ -3,7 +3,7 @@
 
 ## Author
 
-
+David Gipe
 
 ## Description
 
@@ -115,6 +115,7 @@ It may be beneficial for you to create extra methods within the droid sub classe
 
 ## Outside Resources Used
 
+http://stackoverflow.com/questions/929608/why-am-i-getting-this-error-not-all-code-paths-return-a-value
 
 
 ## Known Problems, Issues, And/Or Errors in the Program

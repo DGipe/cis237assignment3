@@ -69,6 +69,262 @@ namespace cis237assignment3
             return Int32.Parse(input);
         }
 
+        public string GetMaterial()
+        {
+            this.MaterialMenu();
+            //Get the input from the user
+            String input = Console.ReadLine();
+
+            //While te imput is not valid re-get the input
+            while (input != "1" && input != "2" && input != "3")
+            {
+
+                //Print Error message
+                this.PrintErrorMessage();
+
+                //re-spring the menu
+                this.MaterialMenu();
+
+                //Get the input from the console again
+                input = Console.ReadLine();
+
+            }
+            if (input == "1")
+            {
+                return "Adamantium";
+            }
+            else
+            {
+                if (input == "2")
+                {
+                    return "Durasteal";
+                }
+                    else
+                       {
+                           return "Carbon Fiber";
+                       }
+            }
+         }
+
+        public string GetColor()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("What color is the droid?");
+            Console.WriteLine("");
+            //Get the input from the user
+            string input = Console.ReadLine();
+            return input;
+        }
+
+        public int GetLanguages()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("How many languages can the droid speak?");
+            Console.WriteLine("");
+            string input = Console.ReadLine();
+            return Int32.Parse(input);
+        }
+
+        public bool getTool()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Does the droid have a toolbox? Y/N");
+            Console.WriteLine("");
+            string input = Console.ReadLine();
+            //While te imput is not valid re-get the input
+            while (input != "Y" && input != "N")
+            {
+
+                //Print Error message
+                this.PrintErrorMessage();
+
+                Console.WriteLine("");
+                Console.WriteLine("Does the droid have a toolbox? Y/N");
+                Console.WriteLine("");
+
+                //Get the input from the console again
+                input = Console.ReadLine();
+
+            }
+
+            if (input == "Y")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool getComp()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Does the droid have a method of connecting to a computer? Y/N");
+            Console.WriteLine("");
+            string input = Console.ReadLine();
+            //While te imput is not valid re-get the input
+            while (input != "Y" && input != "N")
+            {
+
+                //Print Error message
+                this.PrintErrorMessage();
+
+                Console.WriteLine("");
+                Console.WriteLine("Does the droid have a method of connecting to a computer? Y/N");
+                Console.WriteLine("");
+
+                //Get the input from the console again
+                input = Console.ReadLine();
+
+            }
+            if (input == "Y")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool getArm()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Does the droid have a utility arm? Y/N");
+            Console.WriteLine("");
+            string input = Console.ReadLine();
+            //While te imput is not valid re-get the input
+            while (input != "Y" && input != "N")
+            {
+
+                //Print Error message
+                this.PrintErrorMessage();
+
+                Console.WriteLine("");
+                Console.WriteLine("Does the droid have a utility arm? Y/N");
+                Console.WriteLine("");
+
+                //Get the input from the console again
+                input = Console.ReadLine();
+
+            }
+            if (input == "Y")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool GetFire()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Does the droid have a fire extinguisher? Y/N");
+            Console.WriteLine("");
+            string input = Console.ReadLine();
+            //While te imput is not valid re-get the input
+            while (input != "Y" && input != "N")
+            {
+
+                //Print Error message
+                this.PrintErrorMessage();
+
+                Console.WriteLine("");
+                Console.WriteLine("Does the droid have a fire extinguisher? Y/N");
+                Console.WriteLine("");
+
+                //Get the input from the console again
+                input = Console.ReadLine();
+
+            }
+            if (input == "Y")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public int GetShips()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("How many ships can the droid dock with?");
+            Console.WriteLine("");
+            string input = Console.ReadLine();
+            return Int32.Parse(input);
+
+        }
+
+        public bool GetTrash()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Does the droid have a trash compactor? Y/N");
+            Console.WriteLine("");
+            string input = Console.ReadLine();
+            //While te imput is not valid re-get the input
+            while (input != "Y" && input != "N")
+            {
+
+                //Print Error message
+                this.PrintErrorMessage();
+
+                Console.WriteLine("");
+                Console.WriteLine("Does the droid have a trash compactor? Y/N");
+                Console.WriteLine("");
+
+                //Get the input from the console again
+                input = Console.ReadLine();
+
+            }
+            if (input == "Y")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool GetVac()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("Does the droid have a vacuum? Y/N");
+            Console.WriteLine("");
+            string input = Console.ReadLine();
+            //While te imput is not valid re-get the input
+            while (input != "Y" && input != "N")
+            {
+
+                //Print Error message
+                this.PrintErrorMessage();
+
+                Console.WriteLine("");
+                Console.WriteLine("Does the droid have a trash vacuum? Y/N");
+                Console.WriteLine("");
+
+                //Get the input from the console again
+                input = Console.ReadLine();
+
+            }
+            if (input == "Y")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        ////////////////////
+        //   Menus
+        ///////////////////////
         public void Menu()
         {
             Console.WriteLine("");
@@ -98,11 +354,16 @@ namespace cis237assignment3
             Console.WriteLine("");
         }
 
-        private void AstroMenu1()
+        private void MaterialMenu()
         {
-            return;
-
+            Console.WriteLine("");
+            Console.WriteLine("What is the droid made of?");
+            Console.WriteLine("");
+            Console.WriteLine("1- Adamantium");
+            Console.WriteLine("2- Durasteal");
+            Console.WriteLine("3- Carbon Fiber");
+            Console.WriteLine("");
         }
-           
+
     }
 }
