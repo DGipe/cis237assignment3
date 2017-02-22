@@ -20,6 +20,7 @@ namespace cis237assignment3
             UserInterface ui = new UserInterface();
             Utility Util = new Utility();
 
+            
             //Header (cause console programs are boring)
             ui.Output("************************************************************" + Environment.NewLine +
             "*********                   CIS237                 *********" + Environment.NewLine +
@@ -41,7 +42,7 @@ namespace cis237assignment3
                 //******************************************
                 if (choice == 1)
                 {
-                    
+                   
 
                     goto MenuReturn;
 
